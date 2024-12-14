@@ -186,6 +186,8 @@ pub fn primagen(ax: i64, ay: i64, bx: i64, by: i64, pxx: i64, pyy: i64) !i64 {
     // (ay)A + (by)B = py
     // actually because ax, ay, bx, by > 0 and so are px, py this means only one solution
 
+    // Solve the system using Cramer's rule
+
     const d: i64 = ax * by - bx * ay;
     const dx: i64 = px * by - py * bx;
     const dy: i64 = ax * py - px * ay;
